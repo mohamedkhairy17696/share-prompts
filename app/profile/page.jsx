@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import Profie from "@components/Profie";
+import Profile from "@components/Profile";
 
 const MyProfile = () => {
   const { data: session } = useSession();
@@ -24,7 +24,7 @@ const MyProfile = () => {
   }, [session?.user.id]);
 
   return (
-    <Profie
+    <Profile
       name="My"
       desc="Welcome to your personalized page"
       data={myPrompts}
