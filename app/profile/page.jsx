@@ -7,9 +7,6 @@ import Profile from "@components/Profile";
 const MyProfile = () => {
   const { data: session } = useSession();
   const [myPrompts, setMyPrompts] = useState([]);
-  const handleEdit = () => {};
-
-  const handleDelete = () => {};
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -22,6 +19,10 @@ const MyProfile = () => {
       fetchPosts();
     }
   }, [session?.user.id]);
+
+  const handleEdit = () => {};
+
+  const handleDelete = () => {};
 
   return (
     <Profile
